@@ -15,7 +15,7 @@ export class Tab3Page {
   }
 
   getUserFromProvider(){
-    this.servidor.getQuests()
+    this.servidor.getUser()
     .subscribe(
       data => this.users = data,
       err => console.log(err) 

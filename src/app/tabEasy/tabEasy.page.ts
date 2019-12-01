@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ProviderService } from "../provider.service"
 
 @Component({
-  selector: 'app-tab4',
-  templateUrl: 'tab4.page.html',
-  styleUrls: ['tab4.page.scss']
+  selector: 'app-tabEasy',
+  templateUrl: 'tabEasy.page.html',
+  styleUrls: ['tabEasy.page.scss']
 })
-export class Tab4Page {
+export class TabEasyPage {
 
   quests: any;
 
@@ -15,7 +15,7 @@ export class Tab4Page {
   }
 
   getQuestsFromProvider(){
-    this.servidor.getUser()
+    this.servidor.getQuests("Easy")
     .subscribe(
       data => this.quests = data,
       err => console.log(err)  

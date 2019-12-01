@@ -49,35 +49,24 @@
                 <ion-card class="ion-text-center">
                     <ion-card-header>
                       <ion-card-subtitle>Suas Conquistas</ion-card-subtitle>
-                      <ion-card-title>Conquistas</ion-card-title>
+                      <ion-card-title>Medalhas</ion-card-title>
                     </ion-card-header>
                   
                     <ion-card-content>
-                        <ion-icon  size="large" name="help"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                        <ion-icon  size="large" name="planet"></ion-icon>
-                    </ion-card-content>
+                        <ion-card-subtitle tooltip = "Carai" *ngIf=" user.nivel == '0'">Você não possui medalhas, faça Quests para obte-las.</ion-card-subtitle>
+                        <ion-icon   class="ion-padding" size="large" name="logo-game-controller-b" *ngIf=" user.nivel >3"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="logo-freebsd-devil"  *ngIf=" user.nivel >7"></ion-icon>
+                        <ion-icon class="ion-padding" size="large" name="bicycle"  *ngIf=" user.nivel >12"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="bus"  *ngIf=" user.nivel >15"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="heart-half"  *ngIf=" user.nivel >18"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="globe"  *ngIf=" user.nivel >21"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="planet"  *ngIf=" user.nivel >24"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="trophy"  *ngIf=" user.nivel >27"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="thumbs-up"  *ngIf=" user.nivel >30"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="paw"  *ngIf=" user.nivel >33"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="ribbon"  *ngIf=" user.nivel >36"></ion-icon>
+                        <ion-icon  class="ion-padding" size="large" name="rocket"  *ngIf=" user.nivel >39"></ion-icon>
+                      </ion-card-content>
                   </ion-card>
                
             </ion-col>

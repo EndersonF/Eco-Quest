@@ -12,9 +12,14 @@ export class ProviderService {
 
   constructor(private http: Http) { }
   
-  getQuests(){
+  getUser(){
     
     return this.http.get("http://localhost/lord/dados.php").pipe(map(res=>res.json()));
+
+}
+  getQuests(parametro){
+    
+    return this.http.get("http://localhost/lord/dados"+parametro+".php").pipe(map(res=>res.json()));
 
 }
 

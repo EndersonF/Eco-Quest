@@ -28,6 +28,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tabEasy',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tabEasy/tabEasy.module').then(m => m.TabEasyPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {
