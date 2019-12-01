@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProviderService } from "../provider.service"
 
+import { HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',

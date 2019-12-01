@@ -27,7 +27,7 @@ export class TabEasyPage {
       quest: param,
       xp:  1
   };
-  this.servidor.postData(body, 'dados.php')
+  this.servidor.postData(body, 'increment.php');
   }
 }
   

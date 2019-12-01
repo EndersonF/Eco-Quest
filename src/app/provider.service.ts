@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http"
+import { HttpClient } from "@angular/common/http";
 import { Http } from "@angular/http";
 import { map } from "rxjs/operators";
+import { HttpHeaders } from '@angular/common/http';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +15,7 @@ export class ProviderService {
   
   getUser(){
     
-    return this.http.get("http://localhost/lord/dados.php").pipe(map(res=>res.json()));
+    return this.http.get("http://localhost/lord/dados.php","").pipe(map(res=>res.json()));
 
 }
   getQuests(parametro){
@@ -21,9 +24,11 @@ export class ProviderService {
     
 }
 
-postData(body, file) {
-  
-  return this.http.post("http://localhost/lord/dados" + file, JSON.stringify(body));
+postData(body, file:any) {
+  let headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+  return this.http.post("http://localhost/lord/dados"+file,body,{
+    method:"POST"
+  })
 }
 
 }
