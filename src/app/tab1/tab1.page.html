@@ -3,12 +3,12 @@
     <ion-title>
 
 
-        <ion-chip>
-            <ion-avatar>
-              <img src={{icon}}>
+        <ion-chip *ngFor="let user of users">
+            <ion-avatar >
+              <img src={{icon}}{{user.email}}>
             </ion-avatar>
             <ion-label>
-                EcoQuest</ion-label>
+              {{user.nome}}</ion-label>
           </ion-chip>
     
     </ion-title>

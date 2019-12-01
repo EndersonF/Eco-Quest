@@ -43,13 +43,13 @@
                         </ion-col>
                        
                       </ion-item>
-                      <ion-item>
+                      <ion-item *ngFor="let quest of quests">
                         <ion-col size="1">
                             <ion-checkbox color="primary"></ion-checkbox>
                         </ion-col>
                         <ion-col>
 
-                          <ion-text wrap = "wrap"> Nome dado para todo o processo do lixo após seu descarte. </ion-text>
+                          <ion-text wrap = "wrap"> {{quest.email}} </ion-text>
                         </ion-col>
                        
                       </ion-item>

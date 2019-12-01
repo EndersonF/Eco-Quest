@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Md5} from 'ts-md5/dist/md5'
+import { ProviderService } from "../provider.service"
 
 @Component({
   selector: 'app-tab1',
@@ -7,8 +7,21 @@ import {Md5} from 'ts-md5/dist/md5'
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  public email = Md5.hashStr("diego.ab712@gmail.com");
-  public icon = "http://www.gravatar.com/avatar.php?gravatar_id="+this.email;
-  constructor() {}
+  users: any;
+  icon = "http://www.gravatar.com/avatar.php?gravatar_id=";
+  
+  constructor(public servidor:ProviderService) {
+    this.getUserFromProvider()
+  }
+
+  getUserFromProvider(){
+    this.servidor.getQuests()
+    .subscribe(
+      data => this.users = data,
+      err => console.log(err) 
+    )
+
+}
+  
 
 }

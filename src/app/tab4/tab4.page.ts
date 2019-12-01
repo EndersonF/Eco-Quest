@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProviderService } from "../provider.service"
 
 @Component({
   selector: 'app-tab4',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class Tab4Page {
 
-  constructor() {}
+  quests: any;
+
+  constructor(public servidor:ProviderService) {
+    this.getQuestsFromProvider()
+  }
+
+  getQuestsFromProvider(){
+    this.servidor.getQuests()
+    .subscribe(
+      data => this.quests = data,
+      err => console.log(err)  
+    )
+  }
+  
 
 }
