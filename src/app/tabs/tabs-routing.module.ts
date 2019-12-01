@@ -48,6 +48,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'login',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../login/login.module').then(m => m.LoginPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab4',
         children: [
           {

@@ -21,6 +21,15 @@ export class TabEasyPage {
       err => console.log(err)  
     )
   }
+  incrementNivel(param){
+    let body = {
+      action: 'increment',
+      quest: param,
+      xp:  1
+  };
+  this.servidor.postData(body, 'dados.php')
+  }
+}
   
 
-}
+
