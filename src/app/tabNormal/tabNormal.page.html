@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Quests Normal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+      <ion-grid>
+         <ion-row *ngFor="let quest of quests">
+            <ion-col >                 
+                      <ion-item>
+                        <ion-col size="1">
+                            <ion-checkbox (click)=incrementNivel(quest.codigo) color="primary"></ion-checkbox>
+                        </ion-col>
+                        <ion-col>
+                          <ion-text wrap = "wrap">{{quest.texto}}</ion-text>
+                        </ion-col>
+                      </ion-item>   
+            </ion-col>
+          </ion-row>
+      </ion-grid>      
+</ion-content>
