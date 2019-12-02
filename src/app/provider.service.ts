@@ -25,7 +25,7 @@ export class ProviderService {
 }
 
 postData(body, file:any) {
-  return this.http.post("http://localhost/lord/increment.php",body).pipe(map(res=>res));
+  return this.http.get("http://localhost/lord/increment.php",body).pipe(map(res=>res));
 
   }
 }
