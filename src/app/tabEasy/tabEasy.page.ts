@@ -9,7 +9,7 @@ import { ProviderService } from "../provider.service"
 export class TabEasyPage {
 
   quests: any;
-
+  result: any;
   constructor(public servidor:ProviderService) {
     this.getQuestsFromProvider()
   }
@@ -27,9 +27,12 @@ export class TabEasyPage {
       quest: param,
       xp:  1
   };
-  this.servidor.postData(body, 'increment.php');
+    this.servidor.postData(body,"ui")
+    .subscribe(
+      data => this.result = data,
+      err => console.log(err) 
+    )
   }
 }
-  
 
 

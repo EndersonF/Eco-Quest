@@ -25,12 +25,8 @@ export class ProviderService {
 }
 
 postData(body, file:any) {
-  let headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
-  return this.http.post("http://localhost/lord/dados"+file,body,{
-    method:"POST"
-  })
-}
+  return this.http.get("http://localhost/lord/increment.php",body).pipe(map(res=>res));
 
+  }
 }
-
 
