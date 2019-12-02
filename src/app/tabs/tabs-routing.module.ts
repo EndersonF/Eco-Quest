@@ -18,6 +18,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'map',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../map/map.module').then(m => m.MapPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
@@ -38,6 +48,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tabNormal',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tabNormal/tabNormal.module').then(m => m.TabNormalPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tabHard',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tabHard/tabHard.module').then(m => m.TabHardPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {
@@ -48,12 +78,32 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'login',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../login/login.module').then(m => m.LoginPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab4',
         children: [
           {
             path: '',
             loadChildren: () =>
               import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+          }
+        ]
+      },
+      {
+        path: 'tab5',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab5/tab5.module').then(m => m.Tab5PageModule)
           }
         ]
       },
