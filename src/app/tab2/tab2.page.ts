@@ -9,6 +9,7 @@ import { Router } from '@angular/router'
 export class Tab2Page {
   urlTab4 = '/tabs/tab4';
   urlTab5 = '/tabs/tab5';
+  urlTabMap = '/tabs/map';
   constructor(
     private router: Router
   ) {}
