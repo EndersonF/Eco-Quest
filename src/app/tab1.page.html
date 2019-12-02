@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+
+        <ion-tab-button tab="tab3">
+            <ion-chip *ngFor="let user of users">
+                <ion-avatar >
+                  <img src={{icon}}{{user.email}}>
+                </ion-avatar>
+                <ion-label  href="/tabs/tab3">
+                  {{user.nome}}</ion-label>
+              </ion-chip>
+        </ion-tab-button>
+          
+    
+        
+    
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/mundo.png" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>EcoQuest</ion-card-subtitle>
+        <ion-card-title>Bem-Vindo ao EcoQuest</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Faça Missões Ecologicas e Ganhe XP Para Evoluir Seu Nivel Ecologico e Ganhar Conquistas Para seu Perfil. </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Missões</ion-label>
+      </ion-list-header>
+       <!-- <ion-item >
+        <ion-checkbox color="primary"></ion-checkbox>
+        <ion-icon slot="start" color="medium" name="book"></ion-icon> 
+        <ion-label  class="ion-padding-start">Banho Em 15 Minutos</ion-label>
+      </ion-item> -->
+      <ion-item  href="/tabs/tabEasy" >
+        <ion-icon  slot="start" color="medium" name="checkbox"></ion-icon>
+         <ion-label>Easy</ion-label>
+      </ion-item >
+      <ion-item href="/tabs/tabNormal">
+        <ion-icon slot="start" color="medium" name="checkbox"></ion-icon>
+        <ion-label>Normal</ion-label>
+      </ion-item>
+      <ion-item lines = "none">
+        <ion-icon slot="start" color="medium" name="checkbox"></ion-icon>
+        <ion-label>Hard</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
