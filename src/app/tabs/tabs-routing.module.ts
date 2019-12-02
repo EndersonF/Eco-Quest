@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tabNormal',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tabNormal/tabNormal.module').then(m => m.TabNormalPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {
