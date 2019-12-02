@@ -27,7 +27,7 @@ export class TabHardPage {
       quest: param,
       xp:  1
   };
-    this.servidor.postData(body,"ui")
+    this.servidor.postData(body,"Hard")
     .subscribe(
       data => this.result = data,
       err => console.log(err) 

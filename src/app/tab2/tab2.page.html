@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Quiz
+      Dicas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,10 +10,10 @@
   <ion-grid>
     <ion-row >
       <ion-col >
-          <ion-card href="/tabs/tab4" class="ion-text-center">
+          <ion-card  (click)=telaRota(urlTab4)  class="ion-text-center">
               <ion-card-header>
-                <ion-card-subtitle>Quiz 01</ion-card-subtitle>
-                <ion-card-title>Quiz - Reciclagem</ion-card-title>
+                <ion-card-subtitle>Dicas Gerais</ion-card-subtitle>
+                <ion-card-title>Como ajudar fazendo pouco</ion-card-title>
               </ion-card-header>
             </ion-card>
          
@@ -21,12 +21,23 @@
     </ion-row>
     <ion-row >
       <ion-col >
+          <ion-card (click)=telaRota(urlTab5)  class="ion-text-center">
+              <ion-card-header>
+                <ion-card-subtitle>Dicas</ion-card-subtitle>
+                <ion-card-title>Reciclagem</ion-card-title>
+              </ion-card-header>
+               </ion-card>
+         
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col >
           <ion-card class="ion-text-center">
               <ion-card-header>
-                <ion-card-subtitle>Quiz 02</ion-card-subtitle>
-                <ion-card-title>Quiz - Baterias</ion-card-title>
-              </ion-card-header>               
-            </ion-card>
+                <ion-card-subtitle>Mapa</ion-card-subtitle>
+                <ion-card-title>Localizações sobre reciclagem</ion-card-title>
+              </ion-card-header>
+               </ion-card>
          
       </ion-col>
     </ion-row>

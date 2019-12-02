@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProviderService } from "../provider.service"
-
+import { Router } from '@angular/router'
 import { HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-tab1',
@@ -10,8 +10,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class Tab1Page {
   users: any;
   icon = "http://www.gravatar.com/avatar.php?gravatar_id=";
-  
-  constructor(public servidor:ProviderService) {
+
+  constructor(private router: Router,public servidor:ProviderService) {
     this.getUserFromProvider()
   }
 
@@ -23,6 +23,6 @@ export class Tab1Page {
     )
 
 }
-  
+
 
 }

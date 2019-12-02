@@ -27,7 +27,7 @@ export class TabNormalPage {
       quest: param,
       xp:  1
   };
-    this.servidor.postData(body,"ui")
+    this.servidor.postData(body,"Normal")
     .subscribe(
       data => this.result = data,
       err => console.log(err) 
